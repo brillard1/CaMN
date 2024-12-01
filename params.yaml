@@ -1,0 +1,47 @@
+train_data_amr: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/train_pred_cn_extended_real_final.json'
+dev_data_amr: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/dev_pred_cn_extended_real_final.json'
+test_data_amr: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/test_pred_cn_extended_real_final.json'
+
+train_data_jsonl: ''
+dev_data_jsonl: ''
+test_data_jsonl: ''
+
+token_vocab: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/token_vocab'
+concept_vocab: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/concept_vocab'
+token_char_vocab: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/token_char_vocab'
+concept_char_vocab: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/concept_char_vocab'
+relation_vocab: 'datasets/CrisisMMD_v2.0/crisismmd_datasplit_all/AMR_main/informative/relation_vocab'
+
+omcs: False
+n_answers: 2
+mae: True
+vit: False
+
+# AMR params
+concept_char_dim: 32
+concept_dim: 300
+max_concept_len: 100
+snt_layer: 1
+
+# char-cnn
+cnn_filters: [3,256]
+char2concept_dim: 128
+
+# relation encoder
+rel_dim: 100
+rnn_hidden_size: 256
+rnn_num_layers: 2
+
+# core architecture
+embed_dim: 256
+ff_embed_dim: 1024
+num_heads: 8
+graph_layers: 4
+dropout_amr: 0.2
+
+# ViT
+num_classes: 2
+drop_path_rate: 0.1
+global_pool: True
+
+pretrained_file: './glove/glove.840B.300d.txt'
